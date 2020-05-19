@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
             "Friday"
           ],
           onChange: (bool isChecked, String label, int index) => print("isChecked: $isChecked   label: $label  index: $index"),
-          onSelected: (List<String> checked) => print("checked: ${checked.toString()}"),
+          // onSelected: (List<String> checked) => print("checked: ${checked.toString()}"),
         ),
 
 
@@ -127,9 +127,9 @@ class _HomePageState extends State<HomePage> {
         CheckboxGroup(
           orientation: GroupedButtonsOrientation.HORIZONTAL,
           margin: const EdgeInsets.only(left: 12.0),
-          onSelected: (List selected) => setState((){
-            _checked = selected;
-          }),
+          // onSelected: (List selected) => setState((){
+          //   _checked = selected;
+          // }),
           labels: <String>[
             "A",
             "B",
