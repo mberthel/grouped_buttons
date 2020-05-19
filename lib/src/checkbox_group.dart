@@ -28,7 +28,7 @@ class CheckboxGroup extends StatefulWidget {
   final void Function(bool isChecked, String label, int index) onChange;
 
   /// Called when the user makes a selection.
-  final void Function(List<String> selected) onSelected;
+  final void Function(String label, int index) onSelected;
 
   /// The style to use for the labels.
   final TextStyle labelStyle;
@@ -175,7 +175,7 @@ class _CheckboxGroupState extends State<CheckboxGroup> {
         }
 
         if(widget.onChange != null) widget.onChange(isChecked, widget.labels.elementAt(i), i);
-        if(widget.onSelected != null) widget.onSelected(_selected);
+        if(widget.onSelected != null) widget.onSelected(widget.labels.elementAt(i), i);
       });
     }
   }
