@@ -120,6 +120,7 @@ class _CheckboxGroupState extends State<CheckboxGroup> {
 
       Text t = Text(
         widget.labels.elementAt(i),
+        overflow: TextOverflow.ellipsis,
         style: (widget.disabled != null && widget.disabled.contains(widget.labels.elementAt(i))) ?
                   widget.labelStyle.apply(color: Theme.of(context).disabledColor) :
                   widget.labelStyle
